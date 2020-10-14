@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package go.micro.service.hello;
+
+service Hello {
+	rpc Call(Request) returns (Response) {}
+
+}
+
+message Request {
+	string name = 1;
+}
+
+message Response {
+	string msg = 1;
+	uint64 code = 2;
+}
+
+
